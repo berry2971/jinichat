@@ -1,0 +1,166 @@
+@font-face {
+    font-family: 'EF_hyunygothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/EF_hyunygothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SEBANG_Gothic_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*border-width: 1px;*/
+    /*border-style: solid;*/
+}
+
+body {
+    height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+.userContainer {
+    height: 30%;
+    width: 30%;
+    padding: 3%;
+}
+
+.messageContainer {
+    height : 70%;
+    padding: 3%;
+}
+
+/* user */
+.titleBox {
+    height: 30%;
+    font-size: 4vh;
+    font-family: "EF_hyunygothic";
+}
+
+.userBox {
+    height: 70%;
+    overflow-y: auto;
+    padding: 5%;
+    font-family: "EF_hyunygothic";
+}
+
+.talkerBox {
+    width: 100%;
+    font-family: "EF_hyunygothic";
+}
+
+.nicknameBox {
+    height: 10%;
+    font-family: "EF_hyunygothic";
+}
+
+.nicknameInnerBox {
+    height: 100%;
+}
+
+#messageControlBox {
+    height: 10%;
+}
+
+.messageControlInnerBox {
+}
+
+#messageContentBox {
+    font-family: "SEBANG_Gothic_Regular";
+}
+
+.messageContent {
+    padding: 1%;
+}
+
+#nicknameInput {
+    width: 30%;
+    height: 30px;
+}
+
+#messageInput {
+    width: 80%;
+    height: 30px;
+}
+
+
+
+
+
+.blanket {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.b1 {
+    width: 50%;
+    position: relative;
+}
+
+.b2 {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    transform: translate(5%, -50%);
+}
+
+
+
+
+
+
+input {
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+.sbtn {
+    border-style: none;
+    background-color: darkslategray;
+    color: white;
+    width: 3em;
+    height: 2em;
+    margin: 1rem;
+    border-radius: 5px;
+}
+.sbtn-jelly:hover {
+    -webkit-animation: jelly 0.5s;
+    animation: jelly 0.5s;
+}
+@-webkit-keyframes jelly {
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+@keyframes jelly {
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}

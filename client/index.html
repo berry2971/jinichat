@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<link rel="stylesheet" href="index.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Jinichat</title>
+</head>
+<body>
+<div class="userContainer">
+    <div class="titleBox">참여자</div>
+    <div class="talkerBox"><span class="talkerSpan">0</span>명이 떠드는 중!</div>
+    <div class="userBox"></div>
+</div>
+<div class="messageContainer">
+    <div class="b1 nicknameBox">
+        <div class="b2">
+            <div class="nicknameInnerBox nicknameSelectBox">
+                <form>
+                    닉네임 결정하기
+                <input id="nicknameInput">
+                <button class="sbtn sbtn-jelly" type="submit" id="nicknameSend">결정</button>
+                </form>
+            </div>
+            <div class="nicknameInnerBox nicknameDisplayBox hidden">
+                <span class="currentNickname"></span>님 안녕하세요!
+            </div>
+        </div>
+    </div>
+    <div class="b1" id="messageControlBox">
+        <div class="blanket"></div>
+        <div class="b2">
+            <div class="messageControlInnerBox">
+                <form>
+                    <input id="messageInput" placeholder="원하는 말을 해보세요!">
+                    <button type="submit" class="sbtn sbtn-jelly" id="messageSend">전송</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div style="height:50vh; overflow-y: auto">
+    <div class="b1" id="messageContentBox"></div>
+    </div>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app2.js"></script>
+<script>
+    document.addEventListener("keydown", (e) => {
+        if (e.ctrlKey || e.keyCode==123) {
+            e.stopPropagation();
+            e.preventDefault();
+        }
+    });
+    document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+    }, false);
+</script>
+</body>
+</html>
